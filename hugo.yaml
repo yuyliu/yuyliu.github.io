@@ -1,4 +1,134 @@
 baseURL: https://yuyliu.github.io/
 languageCode: en-us
 theme: PaperMod
-title: My New Hugo Site
+title: Yuyang Liu
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableRobotsTXT: true
+pygmentsUseClasses: true # https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+
+menu:
+  main:
+    - identifier: publications
+      name: Publications
+      url: /publications
+      weight: 10
+    - identifier: presentations
+      name: Presentations
+      url: /presentations
+      weight: 20
+    # - identifier: example
+    #   name: example.org
+    #   url: https://example.org
+    #   weight: 30
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  DateFormat: January 2, 2006
+  author: Yuyang Liu
+  # author: ["Me", "You"] # multiple authors
+  defaultTheme: auto # dark, light
+  description: Yuyang Liu’s website
+  env: production # to enable google analytics, opengraph, twitter-cards and schema
+  keywords: [Yuyang, Liu, Yale, Linguistics]
+  title: Yuyang Liu
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowPostNavLinks: true
+  ShowReadingTime: true
+  ShowRssButtonInSectionTermList: true
+  ShowShareButtons: true
+  ShowWordCount: true
+  UseHugoToc: true
+  disableScrollToTop: false
+  disableSpecial1stPost: false
+  disableThemeToggle: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  analytics:
+    google:
+      SiteVerificationTag: "G-HWTZRY35WH"
+    # bing:
+    #   SiteVerificationTag: "XYZabc"
+    # yandex:
+    #   SiteVerificationTag: "XYZabc"
+
+  assets:
+    apple_touch_icon: /apple-touch-icon.png
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: /favicon.ico
+    favicon16x16: /favicon-16x16.png
+    favicon32x32: /favicon-32x32.png
+    safari_pinned_tab: /safari-pinned-tab.svg
+
+  cover:
+    hidden: true # to hide everywhere but not in structured data
+    hiddenInList: true # to hide on list pages and home
+    hiddenInSingle: true # to hide on single page
+
+  # editPost:
+  #   Text: "Suggest Changes"
+  #   URL: "https://github.com/<path_to_repo>/content"
+  #   appendFilePath: true # to append file path to Edit link
+
+  # fuseOpts: # https://fusejs.io/api/options.html
+  #   isCaseSensitive: false
+  #   shouldSort: true
+  #   location: 0
+  #   distance: 1000
+  #   threshold: 0.4
+  #   minMatchCharLength: 0
+  #   limit: 10 # https://www.fusejs.io/api/methods.html#search
+  #   keys: ["title", "permalink", "summary", "content"]
+
+  label:
+    text: Home
+    icon: /android-chrome-512x512.png
+    iconHeight: 32
+
+  socialIcons:
+    - name: email
+      url: mailto:yuyang.liu.yl2472@yale.edu
+    - name: googlescholar
+      url: https://scholar.google.com/citations?user=rsRPCdAAAAAJ
+
+  # home info mode
+  homeInfoParams:
+    Title: "Hello! My name is Yuyang Liu. \U0001F44B"
+    Content: "I am a PhD student in Linguistics at Yale University. My website is currently under construction, but exciting updates are on the way. Stay tuned! If you’ve arrived here through the link on my NELS 55 poster, you can download the poster [here](/presentations/Liu%20-%202024%20-%20Mandarin%20Chinese%20ma%20-%20poster.pdf)."
+ 
+  # profile mode
+  profileMode:
+    enabled: false
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
