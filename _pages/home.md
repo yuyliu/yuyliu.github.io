@@ -1,8 +1,8 @@
 ---
-layout: about
-title: about
+layout: home
+title: home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: PhD candidate in linguistics at <a href="https://ling.yale.edu/profile/yuyang-liu" target="_blank">Yale University</a>
 
 profile:
   align: right
