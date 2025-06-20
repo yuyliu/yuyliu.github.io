@@ -24,6 +24,5 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello!
 I am a PhD candidate in Linguistics at [Yale University](https://ling.yale.edu/profile/yuyang-liu), specializing in syntax and semantics.
-This site is currently under construction!
+This site is currently under construction, but most of it is working fine. Feel free to take a look around, and keep an eye out for exciting updates!
