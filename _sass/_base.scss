@@ -62,7 +62,7 @@ blockquote {
   border-left: 5px solid var(--global-theme-color);
   margin: 1.5em 0;
   padding: 1em;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
 
   p {
     margin-bottom: 0;
@@ -199,7 +199,7 @@ ul.task-list input[type="checkbox"] {
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    // font-family: monospace;
 
     p {
       display: inline-block;
@@ -229,8 +229,8 @@ ul.task-list input[type="checkbox"] {
 }
 
 .post-description {
-  margin-bottom: 2rem;
-  font-size: 0.875rem;
+  // margin-bottom: 2rem;
+  // font-size: 0.875rem;
 
   a {
     color: inherit;
@@ -248,7 +248,7 @@ ul.task-list input[type="checkbox"] {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
-  opacity: 0.95;
+  // opacity: 0.95;
 }
 
 .navbar .dropdown-menu {
@@ -309,24 +309,24 @@ ul.task-list input[type="checkbox"] {
   .navbar-brand.social {
     padding-bottom: 0;
     padding-top: 0;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 
     a {
       img {
-        width: 1.7rem;
-        height: 1.7rem;
-        margin-bottom: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        // margin-bottom: 0.5rem;
         // margin: 0.5rem;
       }
 
       svg {
-        width: 1.7rem;
-        height: 1.7rem;
-        margin-bottom: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        // margin-bottom: 0.5rem;
 
         image {
-          width: 1.7rem;
-          height: 1.7rem;
+          width: 1.5rem;
+          height: 1.5rem;
         }
       }
 
@@ -402,23 +402,23 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 3rem;
 
     a {
       img {
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 3rem;
+        height: 3rem;
         margin-bottom: 1rem;
       }
 
       svg {
-        width: 3.5rem;
-        height: 4rem;
-        margin-bottom: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 1rem;
 
         image {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 3rem;
+          height: 3rem;
         }
       }
 
@@ -438,7 +438,7 @@ ul.task-list input[type="checkbox"] {
   }
 
   .contact-note {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -473,14 +473,15 @@ ul.task-list input[type="checkbox"] {
 }
 
 // Footer
+
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
   }
 
@@ -496,9 +497,9 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+  font-size: 0.75rem;
 
   .container {
     text-align: center;
@@ -873,6 +874,7 @@ footer.sticky-bottom {
 }
 
 // Rouge Color Customization
+
 figure.highlight {
   margin: 0 0 1rem;
 }
@@ -900,6 +902,7 @@ code {
 }
 
 // Transitioning Themes
+
 html.transition,
 html.transition *,
 html.transition *:before,
@@ -909,6 +912,7 @@ html.transition *:after {
 }
 
 // Extra Markdown style (post Customization)
+
 .post {
   .post-meta {
     color: var(--global-text-color-light);
@@ -1061,7 +1065,7 @@ progress::-moz-progress-bar {
   }
 }
 
-/* Table of Contents */
+/* Table of contents */
 nav[data-toggle="toc"] {
   top: 5rem;
 
@@ -1091,9 +1095,9 @@ nav[data-toggle="toc"] {
   }
 }
 
-/* small screens */
+/* Small screens */
 @media (max-width: 576px) {
-  /* override stickyness so that the navigation does not follow scrolling */
+  /* Override stickyness so that the navigation does not follow scrolling */
   nav[data-toggle="toc"] {
     visibility: hidden;
     height: 0;
@@ -1171,7 +1175,8 @@ swiper-container {
 }
 
 // Ninja Keys
-// for more options, check https://github.com/ssleptsov/ninja-keys?tab=readme-ov-file#css-variables
+// For more options, check https://github.com/ssleptsov/ninja-keys?tab=readme-ov-file#css-variables.
+
 ninja-keys {
   --ninja-accent-color: var(--global-theme-color);
   --ninja-icon-size: 0px;
@@ -1187,7 +1192,8 @@ ninja-keys::part(ninja-input-wrapper) {
   background: var(--global-bg-color);
 }
 
-// newsletter
+// Newsletter
+
 .newsletter-form-container {
   margin-bottom: 20px;
 }

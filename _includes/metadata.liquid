@@ -80,12 +80,12 @@
   <!-- Schema.org -->
   {% comment %} Social links generator for "sameAs schema" {% endcomment %}
   {% assign sameaslinks = '' | split: ',' %}
-  {% if site.orcid_id %}
-    {% capture link %}https://orcid.org/{{ site.orcid_id }}{% endcapture %}
+  {% if site.googlescholar_userid %}
+    {% capture link %}https://scholar.google.com/citations?user={{ site.googlescholar_userid }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.scholar_userid %}
-    {% capture link %}https://scholar.google.com/citations?user={{ site.scholar_userid }}{% endcapture %}
+  {% if site.orcid_id %}
+    {% capture link %}https://orcid.org/{{ site.orcid_id }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
   {% if site.semanticscholar_id %}

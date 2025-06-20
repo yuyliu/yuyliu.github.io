@@ -143,6 +143,10 @@ ninja.data = [
           {%- assign social_id = "social-gitlab" -%}
           {%- assign social_title = "GitLab" -%}
           {%- capture social_url %}"https://gitlab.com/{{ social[1] }}"{% endcapture -%}
+        {%- when "googlescholar_userid" -%}
+          {%- assign social_id = "social-scholar" -%}
+          {%- assign social_title = "Google Scholar" -%}
+          {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1] }}"{% endcapture -%}
         {%- when "ieee_id" -%}
           {%- assign social_id = "social-ieee" -%}
           {%- assign social_title = "IEEE Xplore" -%}
@@ -215,10 +219,6 @@ ninja.data = [
           {%- assign social_id = "social-rss" -%}
           {%- assign social_title = "RSS Feed" -%}
           {%- capture social_url %}"{{ site.baseurl }}/feed.xml"{% endcapture -%}
-        {%- when "scholar_userid" -%}
-          {%- assign social_id = "social-scholar" -%}
-          {%- assign social_title = "Google Scholar" -%}
-          {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1] }}"{% endcapture -%}
         {%- when "scopus_id" -%}
           {%- assign social_id = "social-scopus" -%}
           {%- assign social_title = "Scopus" -%}
