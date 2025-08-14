@@ -1,6 +1,6 @@
 ---
 layout: home
-title: home
+title: Home
 permalink: /
 subtitle: <a href="assets/pdf/Liu - 2025 - Curriculum vitae.pdf" target="_blank">CV</a>
 
