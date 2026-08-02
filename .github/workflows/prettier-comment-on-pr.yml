@@ -1,4 +1,4 @@
-name: Comment on pull request
+name: Prettier Comment on Pull Request
 
 on:
   repository_dispatch:
