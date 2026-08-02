@@ -1,34 +1,30 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"lee":
+  - firstname: ["Tommy Tsz-Ming"]
+    url: https://tszminglee.github.io
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"luo":
+  - firstname: ["Yitong"]
+    url: https://campuspress.yale.edu/yitongluo23
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+  - firstname: ["Yunfei"]
+    url: https://yunfeiluo.github.io
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"rahman":
+  - firstname: ["Tauhidur"]
+    url: https://www.tauhidurrahman.com
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"shaw":
+  - firstname: ["Jason"]
+    url: https://campuspress.yale.edu/jasonshaw
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"stern":
+  - firstname: ["Michael"]
+    url: https://www.sternlinguist.com
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"yip":
+  - firstname: ["Ka-Fai"]
+    url: https://kafai-yip.github.io
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"zhou":
+  - firstname: ["Zhenghao Herbert"]
+    url: https://herbert-zhou.github.io
