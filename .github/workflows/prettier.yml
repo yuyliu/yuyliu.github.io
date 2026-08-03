@@ -1,4 +1,4 @@
-name: Prettier code formatter
+name: Prettier Code Formatter # Prettier code formatter
 
 on:
   pull_request:

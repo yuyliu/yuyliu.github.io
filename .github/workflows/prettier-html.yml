@@ -1,4 +1,4 @@
-name: Prettify gh-pages
+name: Prettier gh-pages # Prettify gh-pages
 
 on:
   workflow_dispatch:
