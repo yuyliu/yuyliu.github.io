@@ -180,7 +180,8 @@
       {% if entry.year %}
         {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
       {% endif %}
-      {{ entryyear }}{{- '.' -}}
+      {{ entryyear }}
+      {{- '.' -}}
     </div>
 
     <!-- Title -->
@@ -228,15 +229,17 @@
     {% capture periodical %}{{ entrytype }}{% endcapture %}
     {% if periodical != '' %}
       <div class="periodical">
-        {{ periodical | strip }}{{- '.' -}}
+        {{ periodical | strip }}
+        {{- '.' -}}
       </div>
     {% endif %}
     {% if entry.note %}
       <div class="periodical">
-        {{ entry.note | strip }}{{- '.' -}}
+        {{ entry.note | strip }}
+        {{- '.' -}}
       </div>
     {% endif %}
-    
+
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
@@ -277,7 +280,8 @@
         {% else %}
           <a href="{{ entry.url | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">URL</a>
         {% endif %}
-      {% endif %}      {% if entry.pdf %}
+      {% endif %}
+      {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
           <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
         {% else %}

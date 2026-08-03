@@ -2,7 +2,7 @@
 layout: home # about
 title: Home # about
 permalink: /
-subtitle: '[y˨˩.jaŋ˨˥]' # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: "[y˨˩.jaŋ˨˥]" # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
