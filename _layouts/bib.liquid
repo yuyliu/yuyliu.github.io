@@ -131,7 +131,7 @@
       {%- assign more_authors = author_array_size | minus: author_array_limit -%}
 
       {%- assign more_authors_hide = more_authors | append: ' more author' -%}
-      {% if more_authors > 0 %}
+      {%- if more_authors > 0 -%}
         {%- if more_authors > 1 -%}
           {% assign more_authors_hide = more_authors_hide | append: 's' %}
         {%- endif -%}
@@ -162,7 +162,7 @@
         >
           {{- more_authors_hide -}}
         </span>
-      {% endif %}
+      {%- endif -%}
       {{- '.' -}}
       {% if entry.annotation %}
         <i
@@ -185,22 +185,58 @@
     </div>
 
     <!-- Title -->
+    {% assign book = 'book,booklet,manual,proceedings,techreport'%}
+    {% assign conference = 'conference,inbook,incollection,inproceedings' | split: ',' %}
+    {% assign thesis = 'thesis,BA thesis,BS thesis,mastersthesis,MA thesis,MS thesis,MPhil thesis,phdthesis' | split: ',' %}
     {% assign entrytitle = entry.title | strip %}
+    {% assign final_character = entrytitle | slice: -1 %}
     {% if entrytitle != '' %}
       <div class="title">
-        {{ entrytitle | regex_replace: '([^.!?])$', '\1.' }}
+        {%- if book contains entry.type or thesis contains entry.type -%}
+          <em>{{ entrytitle }}</em>
+        {%- else -%}
+          {{ entrytitle }}
+        {%- endif -%}
+        {%- unless '.!?' contains final_character -%}
+          .
+        {%- endunless -%}
       </div>
     {% endif %}
 
     <!-- Journal/Book -->
-    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
-    {% assign thesis = 'thesis,BA thesis,mastersthesis,phdthesis' | split: ',' %}
+    {% comment %}
+      {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+      {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+    {% endcomment %}
     {% if entry.type == 'article' %}
-      {% capture entrytype %}<em>{{ entry.journal }}</em>{% if entry.volume %} {{ entry.volume }}{% endif %}{% endcapture %}
-    {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}{% comment %}<em>{% endcomment %}In <em>{{ entry.booktitle }}</em>{% endcapture %}
+      {% capture entrytype %}
+        <em>{{ entry.journal }}</em>
+        {% if entry.volume %}
+          {{ entry.volume }}
+        {% endif %}
+      {% endcapture %}
+    {% elsif book contains entry.type %}
+      {% capture entrytype %}
+        {{ entry.publisher }}
+      {% endcapture %}
+    {% elsif conference contains entry.type %}
+      {% capture entrytype %}
+        {% comment %}<em>{% endcomment %}
+        In <em>{{ entry.booktitle }}</em>
+      {% endcapture %}
     {% elsif thesis contains entry.type %}
-      {% capture entrytype %}{% comment %}<em>{% endcomment %}{% if entry.address%}{{entry.address}}: {% endif %}{{ entry.school }} {{ entry.type }}{% comment %}</em>{% endcomment %}{% endcapture %}
+      {% capture entrytype %}
+        {% comment %}<em>{% endcomment %}
+        {{ entry.school }}
+        {% if entry.type == 'mastersthesis' %}
+          master’s thesis
+        {% elsif entry.type == 'phdthesis' %}
+          dissertation
+        {% else %}
+          {{ entry.type }}
+        {% endif %}
+        {% comment %}</em>{% endcomment %}
+      {% endcapture %}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}

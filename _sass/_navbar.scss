@@ -202,7 +202,8 @@
 } //
 
 @media (min-width: 576px) {
-  #light-toggle, #search-toggle {
+  #light-toggle,
+  #search-toggle {
     transform: translateY(4px);
   }
 } //
