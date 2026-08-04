@@ -124,18 +124,20 @@
               <button id="search-toggle" type="button" title="Search" aria-label="Open search">
                 <span class="nav-link">
                   {% comment %}ctrl k {% endcomment %}
-                  <i class="fa-solid fa-magnifying-glass"></i
-                ></span>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
               </button>
             </li>
           {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
-            <li class="toggle-container">
+            <li class="nav-item toggle-container">
               <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
-                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
-                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+                <span class="nav-link">
+                  <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                  <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                  <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+                </span>
               </button>
             </li>
           {% endif %}
