@@ -42,12 +42,12 @@ jobs:
   link-checker:
     runs-on: ubuntu-latest
     # only run on the main repo
-    if: github.repository == 'yuyliu/yuyliu.github.io' # github.repository == 'alshedivat/al-folio'
+    if: github.repository == 'alshedivat/al-folio'
     steps:
-      - uses: actions/checkout@v7 # actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Link Checker 🔗
-        uses: lycheeverse/lychee-action@v2 # lycheeverse/lychee-action@v2.0.2
+        uses: lycheeverse/lychee-action@v2.0.2
         with:
           fail: true
           # removed md files that include liquid tags

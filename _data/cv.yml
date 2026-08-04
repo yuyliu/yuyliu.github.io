@@ -8,11 +8,13 @@ cv:
   # summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
+    # - network: X
+    #   username: AlbertEinstein
     - network: GitHub
       username: example
     - network: LinkedIn
+      username: example
+    - network: X
       username: example
 
   # address:
@@ -23,9 +25,6 @@ cv:
   #   countryCode: US
 
   sections:
-    Summary: #
-      - A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time #
-    
     Education:
       - institution: University of Zurich
         location: Zurich, Switzerland
@@ -45,7 +44,7 @@ cv:
         location: Zurich, Switzerland
         area: Physics
         # studyType: Federal teaching diploma
-        degree: Federal teaching diploma
+        degree: Federal Teaching Diploma
         start_date: 1896
         end_date: 1900
         highlights:
@@ -60,7 +59,7 @@ cv:
         end_date: 1955
         summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
         highlights:
-          - Relativity
+          - Description 1. # Relativity
           - Description 2.
 
       - company: California Institute of Technology
@@ -68,9 +67,9 @@ cv:
         location: Pasadena, California, US
         start_date: 1933
         end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
+        # highlights:
+        #   - Description 1.
+        #   - Description 2.
 
       - company: Kaiser Wilhelm Institute for Physics
         position: Director
@@ -98,8 +97,8 @@ cv:
         end_date: 2015-07-01
         summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Awarded "Climate Hero" award by Greenpeace for my efforts organizing the march. # "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
+          - Men of the year 2014 by Time magazine. # "Men of the year 2014 by Time magazine"
 
     Awards:
       - title: Nobel Prize in Physics
@@ -108,14 +107,14 @@ cv:
         date: 1921-11-01
         awarder: Royal Swedish Academy of Sciences
         url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to "those who, during the preceding year, have conferred the greatest benefit to humankind." # The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
 
       - title: Max Planck Medal
         authors:
           - "German Physical Society"
         date: 2029
         awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+        summary: Awarded for outstanding scientific achievement. #
 
     Publications:
       - title: Zur Elektrodynamik bewegter Körper
@@ -153,7 +152,7 @@ cv:
 
     Languages:
       - name: German
-        summary: "Native speaker"
+        summary: "Native" # "Native speaker"
 
       - name: English
         summary: "Fluent"
