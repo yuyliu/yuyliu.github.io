@@ -66,9 +66,9 @@ jobs:
         # run: |
         #   npm install -g chromedriver@$CHROMIUM_VERSION
         run: |
-            CHROME_MAJOR=$(/opt/google/chrome/chrome --version | grep -oE '[0-9]+' | head -1)
-            echo "Installing ChromeDriver for Chrome ${CHROME_MAJOR}"
-            npm install -g "chromedriver@${CHROME_MAJOR}"
+          CHROME_MAJOR=$(/opt/google/chrome/chrome --version | grep -oE '[0-9]+' | head -1)
+          echo "Installing ChromeDriver for Chrome ${CHROME_MAJOR}"
+          npm install -g "chromedriver@${CHROME_MAJOR}"
       - name: Run axe 🪓
         # https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli
         # run: |
