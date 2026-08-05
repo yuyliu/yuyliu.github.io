@@ -63,8 +63,12 @@ jobs:
         with:
           chrome-version: ${{ env.CHROMIUM_VERSION }}
       - name: Install chromedriver 🚗
+        # run: |
+        #   npm install -g chromedriver@$CHROMIUM_VERSION
         run: |
-          npm install -g chromedriver@$CHROMIUM_VERSION
+            CHROME_MAJOR=$(/opt/google/chrome/chrome --version | grep -oE '[0-9]+' | head -1)
+            echo "Installing ChromeDriver for Chrome ${CHROME_MAJOR}"
+            npm install -g "chromedriver@${CHROME_MAJOR}"
       - name: Run axe 🪓
         # https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli
         # run: |
@@ -73,7 +77,7 @@ jobs:
         #   http-server _site/ &
         #   axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver http://localhost:8080/${{ github.event.inputs.url || env.URL }} --load-delay=1500 --exit
         run: |
-          npx --yes --package http-server http-server _site -p 8080 /tmp/http-server.log 2>&1 &
+          npx --yes --package http-server http-server _site -p 8080 > /tmp/http-server.log 2>&1 &
           for attempt in {1..30}; do
             if curl --fail --silent http://127.0.0.1:8080/ > /dev/null; then
               break
