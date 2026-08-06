@@ -11,8 +11,8 @@ contact_note: # >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Yuyang Liu’s website
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, <a href="https://github.com/alshedivat/al-folio">Al Folio</a>, and <a href="https://github.com/twitter/twemoji">Twemoji</a>.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a>, <a href="https://github.com/alshedivat/al-folio">Al Folio</a>, and <a href="https://github.com/twitter/twemoji">Twemoji</a>.
+  Hosted by <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.
 keywords: liu, yuyang, linguistics, syntax, semantics, yale # jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico # ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)

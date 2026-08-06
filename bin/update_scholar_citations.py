@@ -39,6 +39,7 @@ OUTPUT_FILE: str = "_data/citations.yml"
 def get_scholar_citations() -> None:
     """Fetch and update Google Scholar citation data."""
     print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
+    existing_data = {} #
     today = datetime.now().strftime("%Y-%m-%d")
 
     # Check if the output file was already updated today
@@ -66,7 +67,7 @@ def get_scholar_citations() -> None:
     scholarly.set_retries(3)
     try:
         author = scholarly.search_author_id(SCHOLAR_USER_ID)
-        author_data = scholarly.fill(author)
+        author_data = scholarly.fill(author, sections=["puboications"]) #
     except Exception as e:
         print(
             f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
