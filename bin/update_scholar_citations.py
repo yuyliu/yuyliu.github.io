@@ -27,7 +27,7 @@ def load_scholar_user_id() -> str:
         return scholar_user_id
     except yaml.YAMLError as e:
         print(
-            f"Error parsing YAML file {config_file}: {e}. Please check the file for correct YAML syntax."
+            f"Error parsing YAML file {config_file}: {e} Please check the file for correct YAML syntax."
         )
         sys.exit(1)
 
@@ -58,19 +58,19 @@ def get_scholar_citations() -> None:
                     return
         except Exception as e:
             print(
-                f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e}. The file may be missing or corrupted."
+                f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e} The file may be missing or corrupted."
             )
 
     citation_data = {"metadata": {"last_updated": today}, "papers": {}}
 
     scholarly.set_timeout(15)
-    scholarly.set_retries(3)
+    scholarly.set_retries(0) # scholarly.set_retries(3)
     try:
         author = scholarly.search_author_id(SCHOLAR_USER_ID)
         author_data = scholarly.fill(author, sections=["publications"]) #
     except Exception as e:
         print(
-            f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
+            f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e} Please check your internet connection and Scholar user ID."
         )
         sys.exit(1)
 
@@ -106,7 +106,7 @@ def get_scholar_citations() -> None:
             }
         except Exception as e:
             print(
-                f"Error processing publication '{pub.get('bib', {}).get('title', 'Unknown')}': {e}. This publication will be skipped."
+                f"Error processing publication '{pub.get('bib', {}).get('title', 'Unknown')}': {e} This publication will be skipped."
             )
 
     # Compare new data with existing data
@@ -120,7 +120,7 @@ def get_scholar_citations() -> None:
         print(f"Citation data saved to {OUTPUT_FILE}")
     except Exception as e:
         print(
-            f"Error writing citation data to {OUTPUT_FILE}: {e}. Please check file permissions and disk space."
+            f"Error writing citation data to {OUTPUT_FILE}: {e} Please check file permissions and disk space."
         )
         sys.exit(1)
 
