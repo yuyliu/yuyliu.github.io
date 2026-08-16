@@ -164,16 +164,18 @@
         </span>
       {%- endif -%}
       {{- '.' -}}
-      {% if entry.annotation %}
-        <i
-          class="fa-solid fa-circle-info ml-1"
-          data-toggle="{{ 'popover' }}"
-          data-placement="top"
-          data-html="true"
-          data-content="{{ entry.annotation | escape }}"
-        >
-        </i>
-      {% endif %}
+      {% comment %}
+        {% if entry.annotation %}
+          <i
+            class="fa-solid fa-circle-info ml-1"
+            data-toggle="{{ 'popover' }}"
+            data-placement="top"
+            data-html="true"
+            data-content="{{ entry.annotation | escape }}"
+          >
+          </i>
+        {% endif %}
+      {% endcomment %}
 
       <!-- Date -->
       {% assign entryyear = '' %}
@@ -200,6 +202,16 @@
         {%- unless '.!?' contains final_character -%}
           .
         {%- endunless -%}
+        {% if entry.annotation %}
+          <i
+            class="fa-solid fa-circle-info ml-1"
+            data-toggle="{{ 'popover' }}"
+            data-placement="top"
+            data-html="true"
+            data-content="{{ entry.annotation | escape }}"
+          >
+          </i>
+        {% endif %}
       </div>
     {% endif %}
 
@@ -269,12 +281,21 @@
         {{- '.' -}}
       </div>
     {% endif %}
-    {% if entry.note %}
+    {% if entry.meeting_name %}
       <div class="periodical">
-        {{ entry.note | strip }}
+        {{ entry.meeting_name | strip }}
+        {%- if entry.place -%}, {{ entry.place | strip }}{%- endif -%}
         {{- '.' -}}
       </div>
     {% endif %}
+    {% comment %}
+      {% if entry.note %}
+        <div class="periodical">
+          {{ entry.note | strip }}
+          {{- '.' -}}
+        </div>
+      {% endif %}
+    {% endcomment %}
 
     <!-- Links/Buttons -->
     <div class="links">
@@ -341,6 +362,13 @@
       {% endif %}
       {% if entry.code %}
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+      {% endif %}
+      {% if entry.handout %}
+        {% if entry.handout contains '://' %}
+          <a href="{{ entry.handout }}" class="btn btn-sm z-depth-0" role="button">Handout</a>
+        {% else %}
+          <a href="{{ entry.handout | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Handout</a>
+        {% endif %}
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
