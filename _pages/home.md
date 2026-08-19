@@ -8,7 +8,7 @@ profile:
   align: right
   image: profile.jpg # prof_pic.jpg
   image_circular: true # false # crops the image to make it circular
-  # more_info: >
+  more_info: # >
   #   <p>37 Hillhouse Ave</p>
   #   <p>New Haven, CT 06511</p>
 
