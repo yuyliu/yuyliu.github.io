@@ -166,19 +166,23 @@
         transition: all 0.15s ease;
       }
 
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
-      }
+      // div.abstract.hidden {
+      //   border: dashed 1px var(--global-bg-color);
+      // }
 
       div.abstract.hidden.open {
-        border-color: var(--global-text-color);
+        // border-color: var(--global-text-color);
+        outline: dashed 1px var(--global-text-color); //
+        outline-offset: -1px; //
       }
     }
-    div.award.hidden {
-      border: dashed 1px var(--global-bg-color);
-    }
+    // div.award.hidden {
+    //   border: dashed 1px var(--global-bg-color);
+    // }
     div.award.hidden.open {
-      border-color: var(--global-highlight-color);
+      // border-color: var(--global-highlight-color);
+      outline: dashed 1px var(--global-highlight-color); //
+      outline-offset: -1px; //
     }
   }
 }
