@@ -372,7 +372,8 @@ scholar:
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
-enable_publication_badges: false
+enable_publication_badges:
+  false
   # altmetric: true # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
   # dimensions: true # Dimensions badge (Customization options: https://badge.dimensions.ai/)
   # google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
